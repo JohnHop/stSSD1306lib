@@ -7,7 +7,7 @@ Actually you can only write 7-bit characters. You cannot draw single pixels.<br>
 Support is limited only to a subset of SSD1306 functionalities:
 
 - Fundamental commands
-- Only page addressing mode (with scrollig support)
+- Only page addressing mode (with scrolling support)
 - Hardware Configuration (needed for initialization)
 - Timing & Driving Scheme Setting (also needed for initialization)
 	
