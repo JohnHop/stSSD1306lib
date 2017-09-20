@@ -2,7 +2,7 @@
 
 ## Description
 This is a simple library for ST MCU's in order to write characters on a SSD1306 display.<br>
-I created this library just to learn how SSD1306 controller works and eventually to use it for future projects. It is designed to be simple to undestand and modify as you want.<br>
+I created this library just to learn how SSD1306 controller works and eventually to use it for future projects. It is designed to be easy to undestand and modify as you want.<br>
 Actually you can only write 7-bit characters. You cannot draw single pixels.<br>
 Support is limited only to a subset of SSD1306 functionalities:
 
