@@ -63,8 +63,8 @@ Usually, a single layer uses only functions declared in the layer above it.
 
 
 I am sure that this library is not well optimized. I made it in order to learn how ssd1306 driver works and for fun. Code should be clear so you can easily edit in order to improve speed if you need optimizations.<br>
-For example, `ssd1306_Init()` function maybe uses too many function calls. You can, instead, use a single `ssd1306_send_multiple_commands()` call to save time. Same for `ssd1306_write_string()` function. To undestand this you need to read the ssd1306 datasheet.<br>
-I chose only I2C functions in blocking mode. I think that you can easily edit low layer functions in order to use interrupts and DMA.
+For example, `ssd1306_Init()` function maybe uses too many function calls. You can, instead, use a single `ssd1306_send_multiple_commands()` function call to save time. Same for `ssd1306_write_string()`. To undestand this you need to read the ssd1306 datasheet.<br>
+I chose only I2C functions operating in blocking mode. I think that you can easily edit low layer functions in order to use interrupts and DMA.
 
 
 
