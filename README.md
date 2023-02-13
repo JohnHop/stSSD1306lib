@@ -34,7 +34,7 @@ extern I2C_HandleTypeDef i2c1Handle;
 extern void Error_Handler(void);
 ```
 Please allow VLA (Variable Length Arrays) from C/C++ Compiler options.<br>
-If you want to improve the library, you may be interested to read 'How it works' section.
+If you want to learn or improve this library, you may be interested to read 'How it works' section.
 
 ### Usage
 After `HAL_Init()`, `SystemClock_Config()` and I2C configuration, declare a `SSD1306_HandleTypeDef` structure and initialize it with the function `ssd1306_Init()`. See `ssd1306.c` for function explanatory and also `SSD1306_HandleTypeDef` struct definition inside `ssd1306.h` for some hints.<br>
@@ -46,25 +46,24 @@ Library functions are assigned to three main layers.
 
 <table>
 <tr>
-<td>Low layer functions</td>
+<td>High layer functions</td>
 </tr>
 <tr>
 <td>Mid layer functions</td>
 </tr>
 <tr>
-<td>High layer functions</td>
+<td>Low layer functions</td>
 </tr>
 </table>
 
 Low layer functions are used to communicate with the ssd1306 controller.<br>
 Mid layer functions are usually mapped with the functionalities described at COMMAND TABLE section inside the datasheet.<br>
-High layer functions combines Mid layer functions in order to show a better and simple interface of the library to the user.<br>
-Usually, a single layer uses only functions declared in the layer above it.
+High layer functions combines mid layer functions in order to show a better and simple interface of the library to the user.<br>
+Usually, a single layer only call functions declared in the layer below it.
 
 
-I am sure that this library is not well optimized. I made it in order to learn how ssd1306 driver works and for fun. Code should be clear so you can easily edit it in order to improve speed if you need optimizations.<br>
-For example, `ssd1306_Init()` function maybe uses too many function calls. You can, instead, use a single `ssd1306_send_multiple_commands()` function call to save time. Same for `ssd1306_write_string()`. To undestand this you need to read the ssd1306 datasheet.<br>
-I chose only I2C functions operating in blocking mode. I think that you can easily edit low layer functions in order to use interrupts and DMA.
+I made this library in order to learn how ssd1306 driver works and for fun. Code should be clear so you can easily edit it in order to improve speed if you need optimizations.<br>
+I chose only I2C functions operating in blocking mode. You can easily edit low layer functions in order to use interrupts and DMA.
 
 
 
